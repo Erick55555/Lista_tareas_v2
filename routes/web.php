@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [tareasControlador::class , "mostrar"])->name("ruta_tarea_mostrar");;
+
+
+
+Route::post('/tarea', [tareasControlador::class , "anadir"])->name("ruta_tarea_anadir");
+
+Route::delete('/task/{id}', [tareasControlador::class , "eliminar"]) ->name("ruta_tarea_eliminar");;
