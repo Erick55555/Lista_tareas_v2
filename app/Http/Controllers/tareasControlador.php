@@ -14,7 +14,7 @@ class controladorTareas extends Controller
         return "anadir";
     }
 
-    function eliminar(){
+    function eliminar($id){
         return "eliminar";
     }
 }
