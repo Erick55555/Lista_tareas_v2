@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\tarea;
 use Illuminate\Http\Request;
 
 class controladorTareas extends Controller
@@ -10,11 +11,17 @@ class controladorTareas extends Controller
         return view("extends");
     }
 
-    function anadir(){
-        return "anadir";
+    function anadir(Request $pet){
+        $tarea= new tarea;
+        $tarea->nombre = $pet->get("nombre_tarea");
+        $tarea->save();
+        return redirect("/");
     }
 
     function eliminar($id){
-        return "eliminar";
+        $tarea= new tarea;
+        $tarea = tarea::find($id);
+        $tarea->delete();
+        return redirect("/");
     }
 }
