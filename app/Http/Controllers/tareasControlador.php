@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\tarea;
 use Illuminate\Http\Request;
 
-class controladorTareas extends Controller
+class tareasControlador extends Controller
 {
     function mostrar(){
         return view("extends");

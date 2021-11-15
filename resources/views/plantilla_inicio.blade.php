@@ -4,26 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <title>Plantilla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <body>
-    <div>
-        <div class="contenedor">
-            <header class="head">
-                <div class="titulo">
-                    <h1>Task disk:</h1>
+    <div class="container">
+        <div>
+            <nav class="navbar navbar bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-light" href="#">Lista tareas</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item text-light">
+                                <a>Lista tareas</a>
+                            </li>
+                            <li class="nav-item text-light">
+                                <a>Anadir tarea</a>
+                            </li>
+                            <li class="nav-item text-light">
+                                <a>Eliminar tarea</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="icono">
-                   <i class="fab fa-stack-overflow"></i> 
-                </div>
-            </header>
+            </nav>
         </div>
-        <p>@yield("numero")</p>
+        <div>
+            @yield("Articulo1")
+        </div>
+        <div>
+            @yield("articulo2")
+        </div>
     </div>
-    
-
-    
 </body>
 </html>
