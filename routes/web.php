@@ -14,9 +14,13 @@ use App\Http\Controllers\tareasControlador;
 |
 */
 
-Route::get('/', [tareasControlador::class , "mostrar"])->name("ruta_tarea_mostrar");;
+Route::get('/', [tareasControlador::class , "mostrar"])->name("ruta_tarea");
 
+Route::get('/tarea', [tareasControlador::class , "mostrar_formulario"])->name("ruta_tarea_mostrar");
 
+Route::get('/tarea/buscar', [tareasControlador::class , "mostrar_formulario_buscar"])->name("ruta_tarea_buscar");
+
+Route::post('/tarea/buscar', [tareasControlador::class , "buscar"])->name("ruta_tarea_encontrado");
 
 Route::post('/tarea', [tareasControlador::class , "anadir"])->name("ruta_tarea_anadir");
 

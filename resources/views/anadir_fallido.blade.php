@@ -10,6 +10,7 @@
                 @csrf
                 <input class="forn-control" type="text" name="nombre_tarea" id="nombre_tarea">
                 <input class="btn btn-warning" type="submit" value="Anadir">
+                <p class="text-light">Su nombre esta vacio,vuelva a intentarlo</p>
             </form>
         </div>
     </div>

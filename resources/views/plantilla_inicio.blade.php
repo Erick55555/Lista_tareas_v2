@@ -22,24 +22,27 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav">
                             <li class="nav-item text-light">
-                                <a>Lista tareas</a>
+                                <a href="{{route('ruta_tarea')}}">Lista tareas</a>
                             </li>
                             <li class="nav-item text-light">
-                                <a>Anadir tarea</a>
+                                <a href="{{route('ruta_tarea_anadir')}}">Anadir tarea</a>
                             </li>
                             <li class="nav-item text-light">
-                                <a>Eliminar tarea</a>
+                                <a href="{{route('ruta_tarea_buscar')}}">Buscar tarea</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </div>
-        <div>
-            @yield("Articulo1")
-        </div>
-        <div>
-            @yield("articulo2")
+            <div>
+                @yield("Articulo1")
+            </div>
+            <div>
+                @yield("articulo2")
+            </div>
+            <div>
+                @yield("articulo3")
+            </div>
         </div>
     </div>
 </body>
